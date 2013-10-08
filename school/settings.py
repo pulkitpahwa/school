@@ -50,8 +50,8 @@ MEDIA_ROOT = ''
 MEDIA_URL = ''
 
 STATIC_ROOT = 'staticfiles'
-#STATIC_URL = "/static/"
-STATIC_URL = 'https://googledrive.com/host/0B5s2wS7iky1PdVlQMS1FOVhoM00/'
+STATIC_URL = "/static/"
+#STATIC_URL = 'https://googledrive.com/host/0B5s2wS7iky1PdVlQMS1FOVhoM00/'
 
 STATICFILES_DIRS = (
 	os.path.join(BASE_DIR, 'staticfiles'),
