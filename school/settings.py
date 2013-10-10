@@ -50,7 +50,7 @@ MEDIA_ROOT = ''
 MEDIA_URL = ''
 
 STATIC_ROOT = 'staticfiles'
-#STATIC_URL = "/static/"
+
 STATIC_URL = 'https://googledrive.com/host/0B5s2wS7iky1PdVlQMS1FOVhoM00/'
 
 STATICFILES_DIRS = (
@@ -124,7 +124,13 @@ LOGGING = {
         },
     }
 }
-import dj_database_url
+try:
+    import dj_database_url
+    DATABASES['default'] = dj_database_url.config()
+except ImportError:
+    pass
 
-DATABASES['default'] =  dj_database_url.config()
-
+try:
+    from local_settings import *
+except ImportError:
+    pass
