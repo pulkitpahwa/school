@@ -1,3 +1,4 @@
 venv
 staticfiles/
 *.pyc
+school/local_settings.py

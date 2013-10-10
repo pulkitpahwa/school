@@ -4,12 +4,12 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-DEBUG = True
+DEBUG = False
 
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-     ('', 'your_email@example.com'),
+    # ('', 'your_email@example.com'),
 )
 
 MANAGERS = ADMINS
@@ -130,7 +130,7 @@ try:
 except ImportError:
     pass
 
-#try:
-  #  from local_settings import *
-#except ImportError:
- #   pass
+try:
+    from local_settings import *
+except ImportError:
+    pass
