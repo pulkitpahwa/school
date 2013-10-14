@@ -1,5 +1,5 @@
 from django.conf.urls import patterns, include, url
-from school.views import home,about,achievements,academics,parent,alumni
+from school.views import home,about,achievements,academics,parent,alumni,gallery
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
 admin.autodiscover()
@@ -15,4 +15,5 @@ urlpatterns = patterns('',
 #	url(r'^facilities$',facilities),
 	url(r'^parent-information$',parent),
 	url(r'^alumni$',alumni),
+	url(r'^gallery$',gallery),
 )

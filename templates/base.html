@@ -6,6 +6,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 	<meta http-equiv="imagetoolbar" content="no" />
 	<link rel="stylesheet" href="{% static 'styles/layout.css'%}" type="text/css" />
+	<link rel="stylesheet" href="{% static 'styles/prettyPhoto.css'%}" type="text/css" />
 </head>
 <body id="top" style = "color:black;">
 <div class="wrapper row1">
@@ -67,6 +68,7 @@
 			<a href = ""><li style="display:inline;float:left;padding-left:20px;">Facilities</li></a>
 			<a href = ""><li style="display:inline;float:left;padding-left:20px;">Achievements</li></a><br/>
 			<p style = "margin-top:5px;margin-left:200px;"><center>
+				<a href="/gallery" style = "margin-left:130px;display:inline;float:left;"><li>Gallery</li></a>
 			<a href = ""><li style="display:inline;float:left;padding-left:20px;">Support Us</li></a>
 			<a href=""><li style = "display:inline;float:left;padding-left:20px;">Donations</li></a>
 		</center></p>
@@ -83,8 +85,16 @@
 <!-- ####################################################################################################### -->
 </body>
 </html>
-
 <script type="text/javascript" src="{% static 'scripts/jquery-1.4.1.min.js'%}"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+    $("a[rel^='prettyPhoto']").prettyPhoto({
+        theme: 'dark_rounded',
+        overlay_gallery: false
+    });
+});
+</script>
+<script type="text/javascript" src="{% static 'scripts/jquery-prettyPhoto.js' %}"></script>
 <script type="text/javascript" src="{% static 'scripts/jquery-ui-1.7.2.custom.min.js'%}"></script>
 <script type="text/javascript" src="{% static 'scripts/jquery.tabs.setup.js'%}"></script>
 

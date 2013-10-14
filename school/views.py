@@ -5,8 +5,21 @@ from django.shortcuts import render
 from django.views.generic import CreateView
 from management.models import Holidays,Prospective_student,current_student, Event,Exam_rule
 
+def gallery(request) :
+	a = get_template("gallery.html")
+	c =Context({'title':"sitemap"})
+	html = a.render(c)
+	return HttpResponse(html)
+
 def home(request) :
 	a = get_template("index.html")
+	c =Context({'title':"sitemap"})
+	html = a.render(c)
+	return HttpResponse(html)
+
+
+def gallery(request) :
+	a = get_template("gallery.html")
 	c =Context({'title':"sitemap"})
 	html = a.render(c)
 	return HttpResponse(html)
