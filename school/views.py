@@ -55,3 +55,17 @@ def achievements(request) :
 	html = a.render(c)
 	return HttpResponse(html)
 
+
+def activities(request) :
+	a = get_template("activities.html")
+	c =Context({'title':"sitemap"})
+	html = a.render(c)
+	return HttpResponse(html)
+
+
+def facilities(request) :
+	a = get_template("facilities.html")
+	c =Context({'title':"sitemap"})
+	html = a.render(c)
+	return HttpResponse(html)
+
