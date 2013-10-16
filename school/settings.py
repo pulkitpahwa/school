@@ -4,7 +4,7 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-DEBUG = False
+DEBUG = True
 
 TEMPLATE_DEBUG = DEBUG
 
@@ -98,7 +98,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.admin',
     'django.contrib.admindocs',
-	'management',
+    'management',
 )
 
 LOGGING = {
@@ -137,7 +137,5 @@ try:
 except ImportError:
     pass
 
-try:
-    from local_settings import *
-except ImportError:
-	pass
+from local_settings import *
+
