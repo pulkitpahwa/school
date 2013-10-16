@@ -9,7 +9,7 @@ DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    # ('', 'your_email@example.com'),
+    ('Pulkit', 'pulkitpahwa11@gmail.com'),
 )
 
 MANAGERS = ADMINS
@@ -124,13 +124,20 @@ LOGGING = {
         },
     }
 }
+
+EMAIL_HOST = "smtp.google.com"
+EMAIL_HOST_USER = "pulkitpahwa11@gmail.com"
+EMAIL_HOST_PASSWORD = "78ds55cs48"
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
 try:
     import dj_database_url
     DATABASES['default'] = dj_database_url.config()
 except ImportError:
     pass
 
-#try:
- #   from local_settings import *
-#except ImportError:
-	#pass
+try:
+    from local_settings import *
+except ImportError:
+	pass
