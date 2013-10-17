@@ -4,12 +4,12 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-DEBUG = True
+DEBUG = False
 
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    ('Pulkit', 'pulkitpahwa11@gmail.com'),
+    ('Pulkit Pahwa', 'pulkitpahwa11@gmail.com'),
 )
 
 MANAGERS = ADMINS
@@ -74,6 +74,7 @@ TEMPLATE_LOADERS = (
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.common.BrokenLinkEmailsMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -126,9 +127,9 @@ LOGGING = {
 }
 
 EMAIL_HOST = "smtp.google.com"
-EMAIL_HOST_USER = "pulkitpahwa2013@gmail.com"
-EMAIL_HOST_PASSWORD = "78ds55cs48"
-EMAIL_PORT = 587
+EMAIL_HOST_USER = ""
+EMAIL_HOST_PASSWORD = ""
+EMAIL_PORT = 25
 EMAIL_USE_TLS = True
 
 try:
