@@ -126,7 +126,7 @@ LOGGING = {
 }
 
 EMAIL_HOST = "smtp.google.com"
-EMAIL_HOST_USER = "pulkitpahwa11@gmail.com"
+EMAIL_HOST_USER = "pulkitpahwa2013@gmail.com"
 EMAIL_HOST_PASSWORD = "78ds55cs48"
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
@@ -137,5 +137,8 @@ try:
 except ImportError:
     pass
 
-#from local_settings import *
+try:
+	from local_settings import *
+except ImportError:
+	pass
 
