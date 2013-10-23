@@ -58,17 +58,13 @@
       <!-- ####################################################################################################### -->
 <div id="homepage" class="clear">
         <!-- ###### -->
-        <div id="left_column">
-          <h2>Prospective Students</h2>
-          <ul style = "margin-left:-10px;color:black;">
-		<li>The admissions for the session 2013-2014 have taken place. </li>
-		<li>__ number of students have taken admission during the current academic year.</li>
-	  </ul>
- 	  <h2>Current Students</h2>
-          <ul style = "margin-left:-10px;color:black;">
-		<li>The next fee installment is to be paid latest by 14th August,2013 </li>
-		<li>Students appearing for board examinations this year have to submit 2 passport size photographs to their class teachers by 10th August for the board forms.</li>
-	  </ul>
+                <div id="left_column">
+	<h2>Notices</h2>
+	<ul style = "color:black;">       
+	{%for i in w %}
+		<li>{{i.notice}}</li>
+	{%endfor%}   
+	</ul>
         </div>
         <!-- ###### -->
         <div id="latestnews">

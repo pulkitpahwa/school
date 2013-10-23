@@ -1,56 +1,7 @@
 {%extends "base.html"%}
 {% block center %}
 <!-- ####################################################################################################### -->
-<div class="wrapper">
-  <div id="featured_slide" class="clear">
-    <!-- ###### -->
-    <div class="overlay_left"></div>
-    <div id="featured_content">
-{%load static from staticfiles%}
-      <div class="featured_box" id="fc1"><img src="{% static 'img/6_2.jpg' %}" style = "width : 550px;" alt="" />
-        <div class="floater">
-          <h2>3 Acre campus</h2>
-          <p>The school runs in the bungalow of Brig. Gurbachan Singh Bal,former Sarpanch of the village. The school is dedicated to poor and under-priviledged children of the village. The school is also known as "KOTHI SCHOOL" in the locality.</p>
-        </div>
-      </div>
-      <div class="featured_box" id="fc2"><img src="{% static 'img/14_2.jpg' %}" style = "width : 550px"alt="" />
-        <div class="floater" style = "float:right;">
-          <h2>Computer Education</h2>
-          <p>We believe in an all-round development of students. In present era, a person without computer education is hardly recognised. We at the school,provide regular classes for the computer training. </p>
-        </div>
-      </div>
-      <div class="featured_box" id="fc3"><img src="{% static 'img/3_2.jpg' %}" style = "width:550px;"alt="" />
-        <div class="floater" style = "float:right">
-          <h2>Cultural Events</h2>
-          <p>Brig. Bal and Baba Gobind Trust School regularly organizes various cultural events and many religious festivals are also celeberated.</p>
-        </div>
-      </div>
-      <div class="featured_box" id="fc4"><img src="{% static 'img/1_2.jpg' %}" style = "width : 550px;" alt="" />
-        <div class="floater" style = "float:right;">
-          <h2>Achievements</h2>
-          <p>Our achievement is the success of our student. Our students are placed at good positions in various MNCs and studying at various reputed institutions of the world. </p>
-        </div>
-      </div>
-      <div class="featured_box" id="fc5"><img src="{% static 'img/BABA GOBIND SCHOOL SNAP 26_2.jpg' %}" style ="width :550px;"alt="" />
-       <div class="floater" style = "float:right;">
-          <h2>Commmittee Members</h2>
-          <p>The affairs of the school are managed by Baba Gobind and Brig. Bal Trust, headed by Maj. Gen. G.S. Bal . Gen. Bal has a vast experience in managing schools and has supervised many educational institutions in the Army.</p>
-        </div>
-  
-         </div>
-
-    </div>
-    <ul id="featured_tabs">
-      <li><a href="#fc1">3 acre lush green campus</a></li>
-      <li><a href="#fc2">Computer education</a></li>
-      <li><a href="#fc3">Cultural Events</a></li>
-      <li><a href="#fc4">Achievements</a></li>
-      <li class="last"><a href="#fc5">Commitee Members</a></li>
-    </ul>
-    <div class="overlay_right"></div>
-    <!-- ###### -->
-  </div>
-</div>
+ {%include "lc.html"%}
 <!-- ####################################################################################################### -->
 <div class="wrapper row3">
   <div class="rnd">
@@ -59,18 +10,14 @@
 <div id="homepage" class="clear">
         <!-- ###### -->
         <div id="left_column">
-          <h2>Prospective Students</h2>
-          <ul style = "margin-left:-10px;color:black;">
-		<li>The admissions for the session 2013-2014 have taken place. </li>
-		<li>__ number of students have taken admission during the current academic year.</li>
-	  </ul>
- 	  <h2>Current Students</h2>
-          <ul style = "margin-left:-10px;color:black;">
-		<li>The next fee installment is to be paid latest by 14th August,2013 </li>
-		<li>Students appearing for board examinations this year have to submit 2 passport size photographs to their class teachers by 10th August for the board forms.</li>
-	  </ul>
+	<h2>Notices</h2>
+	<ul style = "color:black;">       
+	{%for i in w %}
+		<li>{{i.notice}}</li>
+	{%endfor%}   
+	</ul>
         </div>
-        <!-- ###### -->
+	<!--    - ###### -->
         <div id="content" class = "clear">
 		<h2 style = "color:rgb(134, 203, 100);"><center>Facilities</center></h2>
 		<div style ="color:black;text-decoration:none;margin-left:30px;"><span style = "color:black;line-height:1.2;">
