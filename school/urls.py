@@ -1,6 +1,5 @@
 from django.conf.urls import patterns, include, url
 from school.views import home,about,achievements,academics,parent,alumni,gallery,activities,facilities
-# Uncomment the next two lines to enable the admin:
 from django.contrib import admin
 admin.autodiscover()
 
