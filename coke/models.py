@@ -24,6 +24,6 @@ class faculty(models.Model):
 	qualification = models.CharField("Qualification",max_length = 15)
  
 	def __unicode__(self):
- 		return self.name,qualification
+ 		return self.name,self.qualification
 
 
