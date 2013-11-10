@@ -20,8 +20,8 @@ class Parent_Information(models.Model):
 
 class faculty(models.Model):
 	name = models.CharField("Name of Faculty",max_length = 30)
-	designation =  models.CharField("Designation",max_length = 15)
-	qualification = models.CharField("Qualification",max_length = 15)
+	designation =  models.CharField("Designation",max_length = 20)
+	qualification = models.CharField("Qualification",max_length = 20)
  
 	def __unicode__(self):
  		return self.name,self.qualification
