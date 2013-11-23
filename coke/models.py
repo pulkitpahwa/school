@@ -26,7 +26,7 @@ class facultie(models.Model):
 	def __unicode__(self):
  		return self.name
 
-class committee(models.Model):
+class committee_member(models.Model):
 	name = models.CharField("Name of member",max_length = 35)
 	father_name = models.CharField("Father's Name",max_length = 35)
 	designation = models.CharField("Designation",max_length = 20)
