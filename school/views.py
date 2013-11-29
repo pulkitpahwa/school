@@ -52,7 +52,7 @@ def fac(request):
 	return HttpResponse(html)
 
 def com(request):
-	a = get_template("faculty.html")
+	a = get_template("commitee-member.html")
 	com = committee_member.objects.all()
 	w = Notice.objects.all()
 	c = Context({'w':w,'com':com})
