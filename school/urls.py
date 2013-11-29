@@ -1,5 +1,5 @@
 from django.conf.urls import patterns, include, url
-from school.views import home,about,achievements,academics,parent,alumni,gallery,activities,facilities
+from school.views import home,about,achievements,academics,parent,alumni,gallery,activities,facilities,fac
 from django.contrib import admin
 admin.autodiscover()
 
@@ -14,5 +14,6 @@ urlpatterns = patterns('',
 	url(r'^facilities$',facilities),
 	url(r'^parent-information$',parent),
 	url(r'^alumni$',alumni),
+	url(r'^faculty_member$',fac),
 	url(r'^gallery$',gallery),
 )
