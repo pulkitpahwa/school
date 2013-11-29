@@ -20,14 +20,14 @@
 	<!--    - ###### -->
         <div id="content" class = "clear">
 		
-<h2>Faculty Members</h2>
+<h2>Committee Members</h2>
 <table style = "border:1px solid black;color:black;margin-top:50px;">
 	<tr style = "border:1px solid black">
-	<b>	<td>Name</td><td>Qualification</td><td>Designation</td> </b>
+	<b>	<td>Name</td><td>Father's Name</td><td>Designation</td> </b>
 	</tr>
-{% for i in fac%}	
+{% for i in com%}	
 	<tr style = "border:1px solid black">
-		<td>{{i.name}}</td><td>{{i.qualification}}</td><td>{{i.designation}}</td>
+		<td>{{i.name}}</td><td>{{i.father_name}}</td><td>{{i.designation}}</td>
 	</tr>
 {%endfor%}
 </table>

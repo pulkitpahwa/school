@@ -3,7 +3,7 @@ from django.template import Context,Template
 from django.template.loader import get_template
 from django.shortcuts import render
 from django.views.generic import CreateView
-from coke.models import Notice,Academic,Parent_Information,facultie
+from coke.models import Notice,Academic,Parent_Information,facultie,committee_member
 
 def gallery(request) :
 	a = get_template("gallery.html")
@@ -48,6 +48,14 @@ def fac(request):
 	w = Notice.objects.all()
 	text = Parent_Information.objects.all()
 	c = Context({'w':w,'fac':fac})
+	html = a.render(c)
+	return HttpResponse(html)
+
+def com(request):
+	a = get_template("faculty.html")
+	com = facultie.objects.all()
+	w = Notice.objects.all()
+	c = Context({'w':w,'com':com})
 	html = a.render(c)
 	return HttpResponse(html)
 
