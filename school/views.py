@@ -53,7 +53,7 @@ def fac(request):
 
 def com(request):
 	a = get_template("faculty.html")
-	com = facultie.objects.all()
+	com = committee_member.objects.all()
 	w = Notice.objects.all()
 	c = Context({'w':w,'com':com})
 	html = a.render(c)
