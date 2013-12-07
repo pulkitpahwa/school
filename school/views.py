@@ -12,6 +12,13 @@ def gallery(request) :
 	html = a.render(c)
 	return HttpResponse(html)
 
+def contact(request):
+	a = get_template("contact.html")
+	w = Notice.objects.all()
+	c = Context({'title':"Contact Us",'w':w})
+	html = a.render(c)
+	return HttpResponse(html)
+
 def home(request) :
 	a = get_template("index.html")
 	w = Notice.objects.all()
