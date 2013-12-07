@@ -1,0 +1,48 @@
+{%extends "base.html"%}
+{% block center %}
+<!-- ####################################################################################################### -->
+ {%include "lc.html"%}
+<!-- ####################################################################################################### -->
+<div class="wrapper row3">
+  <div class="rnd">
+    <div id="container" class="clear">
+      <!-- ####################################################################################################### -->
+<div id="homepage" class="clear">
+        <!-- ###### -->
+        <div id="left_column">
+	<h2>Notices</h2>
+	<ul style = "color:black;">       
+	{%for i in w %}
+		<li>{{i.notice}}</li>
+	{%endfor%}   
+	</ul>
+        </div>
+	<!--    - ###### -->
+        <div id="content" class = "clear">
+	<h2><center>Contact Us</center>	</h2>
+	<h3>Phone:</h3>
+		<ul style = "color:black;display:inline;">
+			<li>Office:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;01843242338</li>
+			<li>Principal: 8146263344</li>
+		</ul>
+	<h3>Address</h3>
+	<ul style = "color:black;display:inline;list-style:none;">
+		<li>Baba Gobind and Brig. Bal Senior Secondary Public School</li>
+		<li>Village Sathiala</li>
+		<li>District Amritsar,Punjab</li>
+	
+	</ul>
+	<h3>Email</h3>
+	babagobindschool@yahoo.com
+	</div>
+	
+      
+        <!-- ###### -->
+        </div>
+      <!-- ####################################################################################################### -->
+      
+    </div>
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+{%endblock%}
